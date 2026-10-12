@@ -1,0 +1,32 @@
+# Crée le ZIP installable du plugin et le joint à la Release GitHub
+# à chaque publication d'une Release (ex. : v0.1.0).
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Déterminer la version
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          echo "TAG=${TAG}" >> "$GITHUB_ENV"
+          VERSION=$(grep '^version=' densite_communale/metadata.txt | cut -d= -f2 | tr -d '\r')
+          test "v${VERSION}" = "${TAG}" || { echo "metadata.txt indique ${VERSION}, l'étiquette est ${TAG}"; exit 1; }
+
+      - name: Construire le ZIP du plugin
+        run: zip -r "densite_communale-${TAG#v}.zip" densite_communale -x "*__pycache__*"
+
+      - name: Joindre le ZIP à la Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          files: densite_communale-*.zip
