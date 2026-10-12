@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Mosaïque de « communes » du jaune au rouge : densité croissante vers le centre -->
+  <g stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M6 10 L24 6 L28 22 L12 28 Z" fill="#ffffb2"/>
+    <path d="M24 6 L44 8 L40 24 L28 22 Z" fill="#fecc5c"/>
+    <path d="M44 8 L58 14 L54 30 L40 24 Z" fill="#ffffb2"/>
+    <path d="M12 28 L28 22 L30 38 L10 44 Z" fill="#fecc5c"/>
+    <path d="M28 22 L40 24 L42 38 L30 38 Z" fill="#e31a1c"/>
+    <path d="M40 24 L54 30 L56 46 L42 38 Z" fill="#fd8d3c"/>
+    <path d="M10 44 L30 38 L32 56 L14 58 Z" fill="#ffffb2"/>
+    <path d="M30 38 L42 38 L46 56 L32 56 Z" fill="#fd8d3c"/>
+    <path d="M42 38 L56 46 L52 58 L46 56 Z" fill="#fecc5c"/>
+  </g>
+</svg>

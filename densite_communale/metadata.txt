@@ -1,0 +1,20 @@
+[general]
+name=Densité communale
+qgisMinimumVersion=3.34
+qgisMaximumVersion=4.99
+supportsQt6=True
+description=Carte de densité de population des communes françaises en un clic, à partir des données officielles de l'API Géo.
+about=Choisissez une région ou un département dans une liste déroulante : le plugin télécharge les contours des communes et leurs populations légales (INSEE) sur l'API Géo de l'État (geo.api.gouv.fr), calcule la densité en hab/km² et produit une carte stylée. Aucune donnée locale à préparer. Trois classifications : échelle nationale (comparable entre territoires), seuils naturels de Jenks ou quantiles. Communes sans population affichées en gris, centroïdes en option. Une connexion internet est nécessaire.
+version=0.1.0
+author=Mawa Diaw
+email=mawadiaw1@gmail.com
+repository=https://github.com/mawa399/densite-communale
+tracker=https://github.com/mawa399/densite-communale/issues
+homepage=https://github.com/mawa399/densite-communale
+category=Analysis
+tags=densité,population,communes,france,insee,api géo,cartographie,démographie
+icon=icon.svg
+experimental=False
+deprecated=False
+hasProcessingProvider=yes
+changelog=0.1.0 — Première version : régions et départements, trois classifications, centroïdes optionnels, compatibilité QGIS 3.34+ et QGIS 4.
