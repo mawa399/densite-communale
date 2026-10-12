@@ -15,6 +15,10 @@
 
 Choisissez une région ou un département dans une liste déroulante : le plugin télécharge les contours des communes et leurs populations légales sur l'[API Géo](https://geo.api.gouv.fr) de l'État, calcule la densité et affiche une carte prête à l'emploi. **Aucune donnée à télécharger ni à préparer.**
 
+> **Deux versions de ce projet existent.**
+> - **Version 2 (ce dépôt)** — plugin QGIS installable qui télécharge lui-même les données officielles (API Géo).
+> - **Version 1 — [densite-communale-v1](https://github.com/mawa399/densite-communale-v1)** — script de traitement qui travaille sur vos propres couches de communes et de population : c'est la version d'origine, issue de l'exercice.
+
 ## Sommaire
 
 - [Fonctionnalités](#fonctionnalités)
